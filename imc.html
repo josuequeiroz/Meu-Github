@@ -1,0 +1,81 @@
+<html>
+   <script language="javascript">
+   num1="";
+   num2="";
+   sex="";
+   IMC="";
+   
+   function enviap(){
+   num1=document.formulario.dpeso.value;
+   }
+   function enviaA(){
+   num2=document.formulario.daltura.value;
+   IMC=num1/(num2*num2);
+      
+   }
+   function sexo(){
+     sex=document.formulario.daltura.value;
+     document.formulario.imc1.value=eval(IMC);   
+   }
+   
+   function resp(){
+   
+    alert("Se você é do sexo masculino seu IMC deve estar entre 20.7 e 27.8 para você estar saudavel.Se estiver abaixo disso voce precisa comer mais,se estiver acima você precisa comer menos.Se você é do sexo feminino seu IMC deve estar entre 19.1 e 27.3.Abaixo disso você esta com IMC baixo e deve se alimentar melhor,acima deve comer menos")
+    
+         
+       
+   }
+   function limpa(){
+     document.formulario.dpeso.value="";
+     document.formulario.daltura.value="";
+     document.formulario.imc1.value="";
+     }
+   function refaz(){
+     document.formulario.dpeso.value="";
+     document.formulario.daltura.value="";
+     document.formulario.imc1.value="";
+     num1="";
+     num2="";
+     sex="";
+     IMC="";
+    
+    }          
+       
+         
+   
+   
+   
+   </script>
+
+<body bgcolor="#1405450">
+<center><h1><font color="#FFFFFF20">Calcule seu IMC!</font></h1></center>
+<center>
+
+<form name="formulario">
+<input type="text" id="dpeso"><br>
+<input type="button" id="Peso" value="Envia peso" onclick="enviap();"><br>
+<input type="text" id="daltura"><br>
+<input type="button" id="altura" value="Envia altura" onclick="enviaA();"><br>
+<br>
+<br>
+<input type="button" id="esexo" value="Veja seu IMC" onclick="sexo();" ><br>
+
+<input type="text" id="imc1"><br>
+<br>
+<br>
+
+<input type="button" id="resposta" value="Obter diagnostico" onclick="resp();"> 
+<br>
+<br>
+<input type="button" id="lim" value="Limpar dados" onclick="limpa();">
+<br>
+<br>
+<input type="button" id="re" value="Fazer denovo" onclick="refaz();">
+</form>
+</center>
+
+
+
+
+</body>
+</html>
